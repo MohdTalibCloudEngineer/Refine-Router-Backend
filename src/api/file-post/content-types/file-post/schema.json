@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "file_posts",
+  "info": {
+    "singularName": "file-post",
+    "pluralName": "file-posts",
+    "displayName": "FilePost",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category",
+      "mappedBy": "file_post"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article",
+      "mappedBy": "file_post"
+    }
+  }
+}

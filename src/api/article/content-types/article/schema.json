@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Article"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "articaleName": {
+      "type": "string"
+    },
+    "file_post": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::file-post.file-post",
+      "inversedBy": "articles"
+    }
+  }
+}
